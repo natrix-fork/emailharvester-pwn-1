@@ -35,11 +35,10 @@ def update():
 	if updated_version != version:
 		print (G + '[!]' + C + ' A New Version is Available : ' + W + updated_version)
 		ans = raw_input(G + '[!]' + C + ' Update ? [y/n] : ' + W)
-		if ans == 'y':
-			print ('\n' + G + '[+]' + C + ' Updating...' + '\n')
-			subprocess.Popen(['git', 'pull'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-			print (G + '[+]' + C + ' Script Updated...Please Execute Again...')
-			exit()
+		print ('\n' + G + '[+]' + C + ' Updating...' + '\n')
+		subprocess.Popen(['git', 'pull'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+		print (G + '[+]' + C + ' Script Updated...Please Execute Again...')
+		exit()
 	else:
 		print (G + '[+]' + C + ' Script is up-to-date...' + '\n')
 
