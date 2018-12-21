@@ -227,7 +227,6 @@ def main():
 	quit()
 try:
 	banner()
-	update()
 	main()
 except KeyboardInterrupt:
 	print ('\n' + R + '[!]' + C + ' Keyboard Interrupt.' + W)
